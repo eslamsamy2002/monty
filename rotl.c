@@ -1,52 +1,52 @@
 #include "monty.h"
 
 /**
- * rotl - .
- * @stack: Pointer to the top of the stack
- * @line_number: Line number of the current operation
+ * rotll - .
+ * @stackk: Pointer to the top of the stack
+ * @line_numberr: Line number of the current operation
  */
-void rotl(stack_t **stack, unsigned int line_number)
+void rotll(stack_t **stackk, unsigned int line_numberr)
 {
-	int top = 0;
+	int topp = 0;
 	stack_t *c = NULL;
 
-	UNUSED(line_number);
-	if (stack != NULL && *stack != NULL && (*stack)->next != NULL)
+	UNUSED(line_numberr);
+	if (stackk != NULL && *stackk != NULL && (*stackk)->next != NULL)
 	{
-		top = (*stack)->n;
-		c = *stack;
+		topp = (*stackk)->n;
+		c = *stackk;
 		while (c->next)
 		{
 			c->n = c->next->n;
 			c = c->next;
 		}
-		c->n = top;
+		c->n = topp;
 	}
 }
 
 /**
- * rotr - .
- * @stack: Pointer to the top of the stack
- * @line_number: Line number of the current operation
+ * rotrr - .
+ * @stackk: Pointer to the top ofggg the stack
+ * @line_numberr: Line number gggof the current operation
  */
-void rotr(stack_t **stack, unsigned int line_number)
+void rotrr(stack_t **stackk, unsigned int line_numberr)
 {
-	int last = 0;
+	int lastt = 0;
 	stack_t *c = NULL;
 
-	UNUSED(line_number);
+	UNUSED(line_numberr);
 
-	if (stack != NULL && *stack != NULL && (*stack)->next != NULL)
+	if (stackk != NULL && *stackk != NULL && (*stackk)->next != NULL)
 	{
-		c = *stack;
+		c = *stackk;
 
 		while (c->next != NULL)
 		{
-			last = c->n;
+			lastt = c->n;
 			c = c->next;
 		}
 
-		last = c->n;
+		lastt = c->n;
 
 		while (c->prev != NULL)
 		{
@@ -54,6 +54,6 @@ void rotr(stack_t **stack, unsigned int line_number)
 			c = c->prev;
 		}
 
-		(*stack)->n = last;
+		(*stackk)->n = lastt;
 	}
 }

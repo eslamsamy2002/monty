@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * print_stack - prints all the elements of a stack_t list.
+ * print_stackk - prints all the elements of a stack_t list.
  * @h: pointer to stack_t head
  * Return: the number of nodes
  */
-size_t print_stack(const stack_t *h)
+size_t print_stackk(const stack_t *h)
 {
 	int i = 0;
 
@@ -19,13 +19,13 @@ size_t print_stack(const stack_t *h)
 }
 
 /**
- * add_dnodeint - Adds a new node at the beginning of a doubly linked list
- * @head: Pointer to the head of the list
- * @n: Value to store in the new node
+ * add_dnodeintt - Addxxxs a new node at the beginning of a doubly linked list
+ * @head: Pointer to the xxxhead of the list
+ * @n: Value to store in thexxx new node
  *
- * Return: Pointer to the new node, or NULL on failure
+ * Return: Pointer to the new nxxxode, or NULL on failure
  */
-stack_t *add_dnodeint(stack_t **head, const int n)
+stack_t *add_dnodeintt(stack_t **head, const int n)
 {
 	stack_t *new_node;
 
@@ -35,7 +35,7 @@ stack_t *add_dnodeint(stack_t **head, const int n)
 	new_node->n = n;
 	new_node->next = NULL;
 	new_node->prev = NULL;
-	/*add new node in the beginning of the list*/
+	/*add new nodxe in the begxxinning of the list*/
 	if (*head)
 	{
 		(*head)->prev = new_node;
@@ -47,12 +47,12 @@ stack_t *add_dnodeint(stack_t **head, const int n)
 }
 
 /**
- * add_stackint_end - add new node at the end of a stack_t list.
- * @head: pointer to head pointer
- * @n: integer value
- * Return: node address or null in fail
+ * add_stackint_endd - add new node axxxt the end of a stack_t list.
+ * @head: pointer to head pointerx
+ * @n: integer valuex
+ * Return: node addrexss or null in fail
  */
-stack_t *add_stackint_end(stack_t **head, const int n)
+stack_t *add_stackint_endd(stack_t **head, const int n)
 {
 	stack_t *new_node, *current;
 
@@ -62,7 +62,7 @@ stack_t *add_stackint_end(stack_t **head, const int n)
 	new_node->n = n;
 	new_node->next = NULL;
 	new_node->prev = NULL;
-	/*add new node in the beginning of the list*/
+	/*add new node in the beginning of tddhe list*/
 	if (*head == NULL)
 		*head = new_node;
 	else
@@ -79,11 +79,11 @@ stack_t *add_stackint_end(stack_t **head, const int n)
 }
 
 /**
- * free_stack - free all the elements of a stack_t list.
+ * free_stackk - free all the elements of a stackxxxx_t list.
  * @head: pointer to stack_t
  * Return: Nothing
  */
-void free_stack(stack_t *head)
+void free_stackk(stack_t *head)
 {
 	stack_t *current;
 
@@ -98,25 +98,25 @@ void free_stack(stack_t *head)
 }
 
 /**
- * delete_top_node - free all the elements of a stack_t list.
- * @stack: pointer to stack_t
+ * delete_top_nodee - free all the elements ofxx a stack_t list.
+ * @stackk: pointer txxxxo stack_t
  */
-void delete_top_node(stack_t **stack)
+void delete_top_nodee(stack_t **stackk)
 {
-	stack_t *temp;
+	stack_t *tempp;
 
-	if (*stack == NULL)
+	if (*stackk == NULL)
 	{
 		printf("Error: Stack is empty.\n");
 		return;
 	}
 
-	temp = *stack;
-	*stack = (*stack)->next;
-	if (*stack != NULL)
+	tempp = *stackk;
+	*stackk = (*stackk)->next;
+	if (*stackk != NULL)
 	{
-		(*stack)->prev = NULL;
+		(*stackk)->prev = NULL;
 	}
-	temp->next = NULL;
-	free(temp);
+	tempp->next = NULL;
+	free(tempp);
 }

@@ -3,78 +3,78 @@
 
 
 /**
- * _div - .
- * @stack: Pointer to the stack
- * @line_number: Line number of the current operation
+ * _divv - fff.
+ * @stackk: Poinfffter to the stack
+ * @line_numberr: Liffffne number of the current operation
  */
-void _div(stack_t **stack, unsigned int line_number)
+void _divv(stack_t **stackk, unsigned int line_numberr)
 {
-	if (stack == NULL || *stack == NULL)
-		print_div_error(line_number);
+	if (stackk == NULL || *stackk == NULL)
+		print_div_errorr(line_numberr);
 
-	if ((*stack)->next)
+	if ((*stackk)->next)
 	{
-		if ((*stack)->n == 0)
-			print_div_by_zero_error(line_number);
-		(*stack)->next->n /= (*stack)->n;
-		delete_top_node(stack);
+		if ((*stackk)->n == 0)
+			print_div_by_zero_errorr(line_numberr);
+		(*stackk)->next->n /= (*stackk)->n;
+		delete_top_nodee(stackk);
 	}
 	else
-		print_div_error(line_number);
+		print_div_errorr(line_numberr);
 
 }
 
 /**
- * mul - .
- * @stack: Pointer to the stack
- * @line_number: Line number of the current operation
+ * mull - ss.
+ * @stackk: Pointer to thesss stack
+ * @line_numberr: Line number of the current operation
  */
-void mul(stack_t **stack, unsigned int line_number)
+void mull(stack_t **stackk, unsigned int line_numberr)
 {
-	if (stack == NULL || *stack == NULL)
-		print_mul_error(line_number);
+	if (stackk == NULL || *stackk == NULL)
+		print_mul_errorr(line_numberr);
 
-	if ((*stack)->next)
+	if ((*stackk)->next)
 	{
-		(*stack)->next->n *= (*stack)->n;
-		delete_top_node(stack);
+		(*stackk)->next->n *= (*stackk)->n;
+		delete_top_nodee(stackk);
 	}
 	else
-		print_mul_error(line_number);
+		print_mul_errorr(line_numberr);
 
 }
 
 /**
- * print_mul_error - .
- * @line_number: Line number of the current operation
+ * print_mul_errorr - .
+ * @line_numberr: Line number of the current operation
  */
-void print_mul_error(int line_number)
+void print_mul_errorr(int line_numberr)
 {
 
-	fprintf(stderr, "L%d: can't mul, stack too short\n", line_number);
+	fprintf(stderr, "L%d: can't mul, stack too short\n", line_numberr);
 	free_everything();
 	exit(EXIT_FAILURE);
 }
 /**
- * print_div_error - .
- * @line_number: Line number of the current operation
+ * print_div_errorr - rr.
+ * @line_numberr: Line numbrrrrrer of the current operation
  */
-void print_div_error(int line_number)
+void print_div_errorr(int line_numberr)
 {
 
-	fprintf(stderr, "L%d: can't div, stack too short\n", line_number);
+	fprintf(stderr, "L%d: can't div, stack too short\n", line_numberr);
 	free_everything();
 	exit(EXIT_FAILURE);
 }
 
 /**
- * print_div_by_zero_error - .
- * @line_number: Line number of the current operation
+ * print_div_by_zero_errorr - r.
+ * @line_numberr: Line numbrrrrrer of the current operation
  */
-void print_div_by_zero_error(int line_number)
+void print_div_by_zero_errorr(int line_numberr)
 {
 
-	fprintf(stderr, "L%d: division by zero\n", line_number);
+	fprintf(stderr, "L%d: division by zero\n", line_numberr);
 	free_everything();
 	exit(EXIT_FAILURE);
 }

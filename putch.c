@@ -1,35 +1,35 @@
 #include "monty.h"
 /**
- * pchar -  Prints the character representation of the top element in the stack
- * @stack: Pointer to the top of the stack
- * @line_number: Line number of the current operation
+ * pcharr -  Prints the character representation of the top element in the stack
+ * @stackk: Pointer to the top of the stack
+ * @line_numberr: Line number of the current operation
  * Return: Nothing
  */
-void pchar(stack_t **stack, unsigned int line_number)
+void pcharr(stack_t **stackk, unsigned int line_numberr)
 {
-	int num;
+	int numm;
 
-	if (stack == NULL || *stack == NULL)
-		print_pchar_stack_empty_error(line_number);
+	if (stackk == NULL || *stackk == NULL)
+		print_pchar_stack_empty_errorr(line_numberr);
 
-	num = (*stack)->n;
-	if ((num >= 65 && num <= 90) || (num >= 97 && num <= 122))
-		printf("%c\n", num);
+	numm = (*stackk)->n;
+	if ((numm >= 65 && numm <= 90) || (numm >= 97 && numm <= 122))
+		printf("%c\n", numm);
 	else
-		print_pchar_error(line_number);
+		print_pchar_errorr(line_numberr);
 }
 /**
- * pstr - Prints the string representation of the integers in the stack.
- * @stack: Pointer to the top of the stack
- * @line_number: Line number of the current operation
+ * pstrr - Printsll the string representation of the integers in the stack.
+ * @stackk: Pointer to the dddtop of the stack
+ * @line_numberr: Line ndddumber of the current operation
  * Return : Nothing
  */
-void pstr(stack_t **stack, unsigned int line_number)
+void pstrr(stack_t **stackk, unsigned int line_numberr)
 {
 	stack_t *c;
 
-	UNUSED(line_number);
-	c = *stack;
+	UNUSED(line_numberr);
+	c = *stackk;
 	while (c)
 	{
 		if ((c->n >= 65 && c->n <= 90) || (c->n >= 97 && c->n <= 122))
@@ -44,27 +44,27 @@ void pstr(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * print_pchar_error - Prints an error
+ * print_pchar_errorr - Prints an error
  * message and terminates the program
- * @line_number: Line number of the current operation
+ * @line_numberr: Line number of the current operation
  * Return : Nothing
  */
-void print_pchar_error(int line_number)
+void print_pchar_errorr(int line_numberr)
 {
-	fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
+	fprintf(stderr, "L%d: can't pchar, value out of range\n", line_numberr);
 	free_everything();
 	exit(EXIT_FAILURE);
 }
 
 /**
- * print_pchar_stack_empty_error - Prints an error
+ * print_pchar_stack_empty_errorr - Prints an errorrrr
  * message and terminates the program
- * @line_number: Line number of the current operation
+ * @line_numberr: Line number of the current operation
  * Return : Nothing
  */
-void print_pchar_stack_empty_error(int line_number)
+void print_pchar_stack_empty_errorr(int line_numberr)
 {
-	fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
+	fprintf(stderr, "L%d: can't pchar, stack empty\n", line_numberr);
 	free_everything();
 	exit(EXIT_FAILURE);
 }

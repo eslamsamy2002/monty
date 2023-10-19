@@ -14,7 +14,7 @@ int execute_file(char *file_name)
 	/*Open the file*/
 	file = fopen(file_name, "r");
 	if (file == NULL)
-		print_open_file_error(file_name);
+		print_open_file_errorr(file_name);
 	my_data.file = file;
 	/*Read and execute each line until the end of the file*/
 	while ((read = getline(&line, &line_length, file)) != -1)
@@ -24,7 +24,7 @@ int execute_file(char *file_name)
 		if (is_empty_line(my_data.line) == 1)
 			execute_line(my_data.line, my_data.line_number);
 	}
-	free_stack(my_data.stack);
+	free_stackk(my_data.stack);
 	fclose(file);
 	free(line);
 	return (0);
@@ -39,29 +39,29 @@ void execute_line(char *line, int line_number)
 	int i;
 	int is_instruction = -1;
 	instruction_t instructions[] = {
-		{"push", push},
-		{"pop", pop},
-		{"pall", pall},
-		{"pint", pint},
-		{"swap", swap},
-		{"nop", nop},
+		{"push", pushh},
+		{"pop", popp},
+		{"pall", palll},
+		{"pint", pintt},
+		{"swap", swapp},
+		{"nop", nopp},
 		{"sub", subtract},
-		{"div", _div},
+		{"div", _divv},
 		{"add", addd},
-		{"mul", mul},
+		{"mul", mull},
 		{"mod", modd},
-		{"pchar", pchar},
-		{"pstr", pstr},
-		{"rotl", rotl},
-		{"rotr", rotr},
-		{"stack", stack},
-		{"queue", queue},
+		{"pchar", pcharr},
+		{"pstr", pstrr},
+		{"rotl", rotll},
+		{"rotr", rotrr},
+		{"stack", stackk},
+		{"queue", queuee},
 	};
 	my_data.arg1 = strtok(line, " \n");
 	my_data.arg2 = strtok(NULL, " \n");
 	if (my_data.arg1[0] == '#')
 	{
-		nop(&my_data.stack, line_number);
+		nopp(&my_data.stack, line_number);
 		return;
 	}
 	for (i = 0; i < INSTRUCTIONS_COUNT; i++)
@@ -74,7 +74,7 @@ void execute_line(char *line, int line_number)
 	if (is_instruction != -1)
 		instructions[i].f(&my_data.stack, line_number);
 	else
-		print_invalid_instruction_error(line_number, my_data.arg1);
+		print_invalid_instruction_errorr(line_number, my_data.arg1);
 }
 /**
  * is_empty_line - .

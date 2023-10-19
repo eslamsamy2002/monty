@@ -1,49 +1,49 @@
 #include "monty.h"
 
 /**
- * pall - Prints all elements in the stack
- * @stack: Pointer to the top of the stack
- * @line_number: Line number of the current operation
+ * palll - Prints all elements in the stack
+ * @stackk: Pointer to the top of the stack
+ * @line_numberr: Line number of the current operation
  */
-void pall(stack_t **stack, unsigned int line_number)
+void palll(stack_t **stackk, unsigned int line_numberr)
 {
-	UNUSED(line_number);
-	print_stack(*stack);
+	UNUSED(line_numberr);
+	print_stackk(*stackk);
 }
 /**
- * push - Pushes an element onto the stack.
- * @stack: Pointer to the top of the stack
- * @line_number: Line number of the current operation
+ * pushh - Pushes an element onto the stack.
+ * @stackk: Pointer to the top of the stack
+ * @line_numberr: Line number of the current operation
  */
-void push(stack_t **stack, unsigned int line_number)
+void pushh(stack_t **stackk, unsigned int line_numberr)
 {
-	int num = 0;
+	int numm = 0;
 
 	if (my_data.arg2)
 	{
-		if (is_num(my_data.arg2))
+		if (is_numm(my_data.arg2))
 		{
-			num = atoi(my_data.arg2);
+			numm = atoi(my_data.arg2);
 			if (my_data.mode == STACK)
-				add_dnodeint(stack, num);
+				add_dnodeintt(stackk, numm);
 			else
-				add_stackint_end(stack, num);
+				add_stackint_endd(stackk, numm);
 		}
 		else
-			print_push_error(line_number);
+			print_push_errorr(line_numberr);
 
 	}
 	else
-		print_push_error(line_number);
+		print_push_errorr(line_numberr);
 }
 /**
- * print_push_error - Prints an error message and terminates the program
- * @line_number: Line number of the current operation
+ * print_push_errorr - Prints an error message and terminates the program
+ * @line_numberr: Line number of the current operation
  */
-void print_push_error(int line_number)
+void print_push_errorr(int line_numberr)
 {
 
-	fprintf(stderr, "L%d: usage: push integer\n", line_number);
+	fprintf(stderr, "L%d: usage: push integer\n", line_numberr);
 	free_everything();
 	exit(EXIT_FAILURE);
 }
@@ -52,7 +52,7 @@ void print_push_error(int line_number)
  */
 void free_everything(void)
 {
-	free_stack(my_data.stack);
+	free_stackk(my_data.stack);
 	fclose(my_data.file);
 	free(my_data.line);
 }

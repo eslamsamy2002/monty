@@ -63,57 +63,56 @@ typedef struct instruction_s
 } instruction_t;
 
 /*error functions*/
-void print_open_file_error(char *file_name);
-void print_usage_error(void);
-void print_invalid_instruction_error
-					(int line_number, char *opcode_instruction);
+void print_open_file_errorr(char *file_namee);
+void print_usage_errorr(void);
+void print_invalid_instruction_errorr(int line_numberr, char *opcode_instructionn);
 void print_malloc_error(void);
-void print_push_error(int line_number);
-void print_empty_stack_error(int line_number);
-void print_pint_error(int line_number);
-void print_swap_error(int line_number);
+void print_push_errorr(int line_numberr);
+void print_empty_stack_errorr(int line_numberr);
+void print_pint_errorr(int line_numberr);
+void print_swap_errorr(int line_numberr);
 void print_add_errorr(int line_numberr);
-void print_sub_error(int line_number);
-void print_div_error(int line_number);
-void print_div_by_zero_error(int line_number);
-void print_mul_error(int line_number);
+void print_sub_errorr(int line_numberr);
+void print_div_errorr(int line_numberr);
+void print_div_by_zero_errorr(int line_numberr);
+void print_mul_errorr(int line_numberr);
 void print_mod_errorr(int line_numberr);
-void print_pchar_error(int line_number);
-void print_pchar_stack_empty_error(int line_number);
+void print_pchar_errorr(int line_numberr);
+void print_pchar_stack_empty_errorr(int line_numberr);
 /*execute functions*/
 int execute_file(char *file_name);
 void execute_line(char *line, int line_number);
 
 /*instructions*/
-void pall(stack_t **stack, unsigned int line_number);
-void pop(stack_t **stack, unsigned int line_number);
-void push(stack_t **stack, unsigned int line_number);
-void pint(stack_t **stack, unsigned int line_number);
-void swap(stack_t **stack, unsigned int line_number);
-void nop(stack_t **stack, unsigned int line_number);
+void palll(stack_t **stackk, unsigned int line_numberr);
+void popp(stack_t **stackk, unsigned int line_numberr);
+void pushh(stack_t **stackk, unsigned int line_numberr);
+void pintt(stack_t **stackk, unsigned int line_numberr);
+void swapp(stack_t **stackk, unsigned int line_numberr);
+void nopp(stack_t **stackk, unsigned int line_numberr);
 void subtract(stack_t **stackk, unsigned int line_numberrr);
 void addd(stack_t **stackk, unsigned int line_numberr);
-void _div(stack_t **stack, unsigned int line_number);
-void mul(stack_t **stack, unsigned int line_number);
+void _divv(stack_t **stackk, unsigned int line_numberr);
+void mull(stack_t **stackk, unsigned int line_numberr);
 void modd(stack_t **stackk, unsigned int line_numberr);
-void pchar(stack_t **stack, unsigned int line_number);
-void pstr(stack_t **stack, unsigned int line_number);
-void rotl(stack_t **stack, unsigned int line_number);
-void rotr(stack_t **stack, unsigned int line_number);
-void queue(stack_t **stack, unsigned int line_number);
-void stack(stack_t **stack, unsigned int line_number);
+void pcharr(stack_t **stackk, unsigned int line_numberr);
+void pstrr(stack_t **stackk, unsigned int line_numberr);
+void rotll(stack_t **stackk, unsigned int line_numberr);
+void rotrr(stack_t **stackk, unsigned int line_numberr);
+void queuee(stack_t **stackk, unsigned int line_numberr);
+void stackk(stack_t **stackk, unsigned int line_numberr);
 
 /*linked list functions*/
-size_t print_stack(const stack_t *h);
-stack_t *add_dnodeint(stack_t **head, const int n);
-void free_stack(stack_t *head);
-void delete_top_node(stack_t **stack);
-stack_t *add_stackint_end(stack_t **head, const int n);
+size_t print_stackk(const stack_t *h);
+stack_t *add_dnodeintt(stack_t **head, const int n);
+void free_stackk(stack_t *head);
+void delete_top_nodee(stack_t **stackk);
+stack_t *add_stackint_endd(stack_t **head, const int n);
 
 /*helper*/
 
 void free_everything(void);
 
 int is_empty_line(char *line);
-int is_num(char *num);
-#endif /*MONTY_H*/
+int is_numm(char *numm);
+#endif 

@@ -1,40 +1,39 @@
 #include "monty.h"
 
 /**
- * print_usage_error - .
+ * print_usage_errorr - .
  */
-void print_usage_error(void)
+void print_usage_errorr(void)
 {
 	fprintf(stderr, "USAGE: monty file\n");
 	exit(EXIT_FAILURE);
 }
 /**
- * print_open_file_error - .
- * @file_name: ..
+ * print_open_file_errorr - .
+ * @file_namee: ..
  */
-void print_open_file_error(char *file_name)
+void print_open_file_errorr(char *file_namee)
 {
-	fprintf(stderr, "Error: Can't open file %s\n", file_name);
+	fprintf(stderr, "Error: Can't open file %s\n", file_namee);
 	exit(EXIT_FAILURE);
 }
 /**
- * print_invalid_instruction_error - Prints an error message and exits when
- * an unrecognized opcode is encountered
- * @line_number: Line number of the current operation
- * @opcode_instruction: Pointer to the unrecognized opcode
+ * print_invalid_instruction_errorr - Prints an error message and exits when
+ * @line_numberr: Line number of the current operation
+ * @opcode_instructionn: Pointer to the unrecognized opcode
  */
-void print_invalid_instruction_error(int line_number, char *opcode_instruction)
+void print_invalid_instruction_errorr(int line_numberr, char *opcode_instructionn)
 {
 
 	fprintf(stderr, "L%d: unknown instruction %s\n",
-							line_number, opcode_instruction);
+							line_numberr, opcode_instructionn);
 	free_everything();
 	exit(EXIT_FAILURE);
 }
 /**
- * print_malloc_error - .
+ * print_malloc_errorr - .
  */
-void print_malloc_error(void)
+void print_malloc_errorr(void)
 {
 	free_everything();
 	fprintf(stderr, "Error: malloc failed");
