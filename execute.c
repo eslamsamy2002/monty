@@ -43,6 +43,8 @@ void execute_line(char *line, int line_number)
 		{"pop", pop},
 		{"pall", pall},
 		{"pint", pint},
+		{"swap", swap},
+		{"nop", nop},
 	};
 	my_data.arg1 = strtok(line, " \n");
 	my_data.arg2 = strtok(NULL, " \n");
