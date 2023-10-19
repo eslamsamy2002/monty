@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * pcharr -  Prints the character representation of the top element in the stack
+ * pcharr -  Prints the character representation of tht in the stack
  * @stackk: Pointer to the top of the stack
  * @line_numberr: Line number of the current operation
  * Return: Nothing
@@ -45,7 +45,6 @@ void pstrr(stack_t **stackk, unsigned int line_numberr)
 
 /**
  * print_pchar_errorr - Prints an error
- * message and terminates the program
  * @line_numberr: Line number of the current operation
  * Return : Nothing
  */
