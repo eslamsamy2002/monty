@@ -1,84 +1,84 @@
 #include "monty.h"
 /**
- * sub - Sub
- * @stack: Pointer to the stack
- * @line_number: Line number of the current operation
+ * subtract - Subllll
+ * @stackk: Pointer to the stlllllack
+ * @line_numberrr: Linellllll
  */
-void sub(stack_t **stack, unsigned int line_number)
+void subtract(stack_t **stackk, unsigned int line_numberrr)
 {
-	if (stack == NULL || *stack == NULL)
-		print_sub_error(line_number);
+	if (stackk == NULL || *stackk == NULL)
+		print_sub_error(line_numberrr);
 
-	if ((*stack)->next)
+	if ((*stackk)->next)
 	{
-		(*stack)->next->n -= (*stack)->n;
-		delete_top_node(stack);
+		(*stackk)->next->n -= (*stackk)->n;
+		delete_top_node(stackk);
 	}
 	else
-		print_sub_error(line_number);
+		print_sub_error(line_numberrr);
 }
 
 /**
- * add - .
- * @stack: Pointer to the stack
- * @line_number: Line number of the current operation
+ * addd - .
+ * @stackk: Pointer to the stacsssk
+ * @line_numberr: Line number of the current operation
  */
-void add(stack_t **stack, unsigned int line_number)
+void addd(stack_t **stackk, unsigned int line_numberr)
 {
-	if (stack == NULL || *stack == NULL)
-		print_add_error(line_number);
+	if (stackk == NULL || *stackk == NULL)
+		print_add_error(line_numberr);
 
-	if ((*stack)->next)
+	if ((*stackk)->next)
 	{
-		(*stack)->next->n += (*stack)->n;
-		delete_top_node(stack);
+		(*stackk)->next->n += (*stackk)->n;
+		delete_top_node(stackk);
 	}
 	else
-		print_add_error(line_number);
+		print_add_error(line_numberr);
 }
 
 /**
- * mod - .
- * @stack: Pointer to the stack
- * @line_number: Line number of the current operation
+ * modd - .
+ * @stackk: Pointer to the stack
+ * @line_numberr: Line number of the current operation
  */
-void mod(stack_t **stack, unsigned int line_number)
+void modd(stack_t **stackk, unsigned int line_numberr)
 {
-	if (stack == NULL || *stack == NULL)
-		print_mod_error(line_number);
+	if (stackk == NULL || *stackk == NULL)
+		print_mod_error(line_numberr);
 
-	if ((*stack)->next)
+	if ((*stackk)->next)
 	{
-		if ((*stack)->n == 0)
-			print_div_by_zero_error(line_number);
-		(*stack)->next->n %= (*stack)->n;
-		delete_top_node(stack);
+		if ((*stackk)->n == 0)
+			print_div_by_zero_error(line_numberr);
+		(*stackk)->next->n %= (*stackk)->n;
+		delete_top_node(stackk);
 	}
 	else
-		print_mod_error(line_number);
+		print_mod_error(line_numberr);
 }
 
 /**
- * print_mod_error - .
- * @line_number: Line number of the current operation
+ * print_mod_errorr - .
+ * @line_numberr: Line number of the current operation
  */
-void print_mod_error(int line_number)
+void print_mod_errorr(int line_numberr)
 {
 
-	fprintf(stderr, "L%d: can't mod, stack too short\n", line_number);
+	fprintf(stderr, "L%d: can't mod, stack too short\n", line_numberr);
 	free_everything();
 	exit(EXIT_FAILURE);
 }
 
 
 /**
- * print_add_error - .
- * @line_number: Line number of the current operation
+ * print_add_errorr - .
+ * @line_numberr: Line number of the current operation
  */
-void print_add_error(int line_number)
+void print_add_errorr(int line_numberr)
 {
 
-	fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
+	fprintf(stderr, "L%d: can't add, stack too short\n", line_numberr);
 	free_everything();
 	exit(EXIT_FAILURE);
 }
