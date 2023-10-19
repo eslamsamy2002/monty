@@ -26,7 +26,7 @@ void subtract(stack_t **stackk, unsigned int line_numberrr)
 void addd(stack_t **stackk, unsigned int line_numberr)
 {
 	if (stackk == NULL || *stackk == NULL)
-		print_add_error(line_numberr);
+		print_add_errorr(line_numberr);
 
 	if ((*stackk)->next)
 	{
@@ -34,7 +34,7 @@ void addd(stack_t **stackk, unsigned int line_numberr)
 		delete_top_node(stackk);
 	}
 	else
-		print_add_error(line_numberr);
+		print_add_errorr(line_numberr);
 }
 
 /**
@@ -45,7 +45,7 @@ void addd(stack_t **stackk, unsigned int line_numberr)
 void modd(stack_t **stackk, unsigned int line_numberr)
 {
 	if (stackk == NULL || *stackk == NULL)
-		print_mod_error(line_numberr);
+		print_mod_errorr(line_numberr);
 
 	if ((*stackk)->next)
 	{
@@ -55,7 +55,7 @@ void modd(stack_t **stackk, unsigned int line_numberr)
 		delete_top_node(stackk);
 	}
 	else
-		print_mod_error(line_numberr);
+		print_mod_errorr(line_numberr);
 }
 
 /**
