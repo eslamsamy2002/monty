@@ -22,7 +22,7 @@ void print_open_file_errorr(char *file_namee)
  * @line_numberr: Line number of the current operation
  * @opcode_instructionn: Pointer to the unrecognized opcode
  */
-void print_invalid_instruction_errorr(int line_numberr, char *opcode_instructionn)
+void print_invalid_instruction_(int line_numberr, char *opcode_instructionn)
 {
 
 	fprintf(stderr, "L%d: unknown instruction %s\n",

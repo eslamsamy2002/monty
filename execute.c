@@ -74,7 +74,7 @@ void execute_line(char *line, int line_number)
 	if (is_instruction != -1)
 		instructions[i].f(&my_data.stack, line_number);
 	else
-		print_invalid_instruction_errorr(line_number, my_data.arg1);
+		print_invalid_instruction_(line_number, my_data.arg1);
 }
 /**
  * is_empty_line - .
