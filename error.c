@@ -18,7 +18,7 @@ void print_open_file_errorr(char *file_namee)
 	exit(EXIT_FAILURE);
 }
 /**
- * print_invalid_instruction_errorr - Prints an error message and exits when
+ * print_invalid_instruction_ - Prints an error message and exits when
  * @line_numberr: Line number of the current operation
  * @opcode_instructionn: Pointer to the unrecognized opcode
  */
